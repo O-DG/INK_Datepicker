@@ -1,0 +1,151 @@
+
+// ink datepicker
+
+$main_color : #333;
+$sub_color : #666;
+$dis_color : #999;
+$interval : 16px;
+$interval_2 : 12px;
+
+.ink_datepicker {display: block; width: 100%; height: auto; margin: 0; padding: 0; font-size: 10px; position: fixed; left: 0; top: 0; z-index: 11000;
+  &:after {content: ''; display: block; clear: both;}
+  * {box-sizing: border-box;}
+  // reset
+  a {text-decoration: none;}
+  select {border: 0;}
+  button {border: 0; cursor: pointer;}
+
+  .ink_datepicker_bg {display: inline-block; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.7);}
+
+
+  .ink_datepicker_wrap {width: 100%; max-width: 420px; margin: 0 auto; padding: 0; font-family: "NotoSansR"; font-size: 10px; position: absolute; left: 50%; top: 50%; transform:translate(-50%, -50%); background-color: #fff; box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); transition: all 0.35s ease;
+
+    @media screen and (max-width: 800px) {
+      width: calc(100% - 40px);        
+    }
+
+    .ink_datepicker_header {display: flex; justify-content: center; align-items: center; font-weight: 700; font-size: 2em; line-height: 40px; padding: $interval; margin: 0; transition: all 0.35s ease; color: #fff; background-color: $main_color;
+
+      select {appearance: none; padding: 4px; background-color: transparent;
+        &:hover, &:focus {color: #ed2a61;}
+        &::-ms-expand {display: none;}
+
+        option {background-color: $main_color;
+          &:hover, &:focus {color: #fff;}
+          &[selected] {background-color: #ed2a61;}
+        }
+
+      }
+
+      .ink_datepicker_title {width: 300px; text-align: center; line-height: 1; font-size: 10px;
+        .ink_datepicker_year_wrap {display: inline-block; position: relative;
+          .ink_datepicker_year {width: auto; font-size: 2em; font-weight: bold; margin: 0; color: #fff;
+            option {font-size: 1.4em; font-weight: normal;}
+          }
+          @media screen and (max-width: 300px) {
+            display: block; text-align: center; margin: 0 auto 6px;
+            .ink_datepicker_year {display: block; width: 100%; margin: 0 auto; text-align: center;}
+          }
+        }
+        .ink_datepicker_month_wrap {display: inline-block;
+          .ink_datepicker_month {width: auto; font-size: 2em; font-weight: bold; margin: 0; color: #fff;
+            option {font-size: 1.4em; font-weight: normal;}
+          }
+          @media screen and (max-width: 300px) {
+            display: block; text-align: center;
+            .ink_datepicker_month {display: block; width: 100%; margin: 0 auto; text-align: center;}
+          }
+        }
+      }
+      .ink_datepicker_btn {display: flex;}
+
+      .ink_datepicker_btn_prev,
+      .ink_datepicker_btn_next {display: block; width: 50px; height: 40px; font-size: 0; display: flex; justify-content: center; align-items: center;
+
+        &:before,
+        &:before {content: ""; display: block; width: 10px; height: 10px; border: 3px solid #fff; border-width: 3px 3px 0 0; transition: border 0.1s;}
+        &:hover, &:focus {
+          &:before,
+          &:before {border-color: #ed2a61;}
+        }
+      }
+      .ink_datepicker_btn_prev {
+        &:before {transform: translate(25%, 0) rotate(-135deg);}
+      }
+      .ink_datepicker_btn_next {
+        &:before {transform: translate(-25%, 0) rotate(45deg);}
+      }
+
+    }
+
+    .ink_datepicker_table {position: relative; margin: 0 auto; padding: $interval_2;
+
+      &:after {top: 368px;}
+
+      .ink_datepicker_days {display: flex; padding-bottom: 10px; border-bottom: 1px solid #e2e2e2;}
+      .ink_datepicker_day {display:flex; align-items: center; justify-content: center; width: calc(100% / 7); text-align: left; color: #666; font-size: 1.4em; font-weight: bold; text-align: center; border-radius:5px; cursor: pointer;
+
+        &:first-child {color: #ed2a61;}
+        &:nth-child(7n + 1) {color: #ed2a61;}
+        &:nth-child(7n) {color: #3c6ffa;}
+        &.disable {color: #ddd;}
+      }
+      .ink_datepicker_dates {display: flex; flex-flow: wrap; height: 180px;
+        .this {color: #666; position: relative;
+          &::before {content: ''; display: block; width: 100%; max-width: 30px; height: 100%; max-height: 30px; background-color: transparent; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: -1; opacity: 0;}
+          &:hover, &:focus {color: $main_color;
+            &::before {background-color: $sub_color; opacity: 0.3;}
+          }
+
+          &:first-child {color: #ed2a61;
+            &.current {color: #fff;}
+          }
+          &:nth-child(7n + 1) {color: #ed2a61;
+            &.current {color: #fff;}
+          }
+          &:nth-child(7n) {color: #3c6ffa;
+            &.current {color: #fff;}
+          }
+          &.disable {color: #ddd;
+            &.current {color: #fff;}
+            &:hover, &:focus {color: #ddd;
+              &::before {background-color: transparent;}
+            }
+          }
+
+          &.today {color: #fff;
+            &::before {background-color: $main_color; opacity: 0.5;}
+          }
+          &.current {color: #fff;
+            &::before {background-color: $main_color; opacity: 1;}
+          }
+
+
+        }
+
+      }
+
+    }
+
+    .ink_datepicker_menu {display: block; width: 100%; height: auto; border-top: 1px solid #e2e2e2; padding: $interval_2;
+      .ink_datepicker_btn_wrap {display: flex; width: 100%; height: auto; margin: 0 auto; padding: 0;
+        .ink_datepicker_btn {flex: 0 1 auto; background-color: transparent; width: auto; height: 30px; line-height: 30px; padding: 0 $interval_2; border-radius: 20px; font-size: 1.4em; font-weight: bold; transition: all 0.35s ease;
+          &.today {color: #fff; background-color: $main_color; margin-right: $interval_2;}
+          &.cancel {color: #fff; margin-left: auto; background-color: #ed2a61;}
+          &.reset {color: #fff;background-color: $dis_color;}
+
+          &:hover, &:focus {box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);}
+        }
+        @media screen and (max-width: 400px) {
+          flex-direction: column;
+          .ink_datepicker_btn {flex: 1 1 auto; width: 100%; margin: 0 0 $interval_2; float: none;
+            &:last-child {margin: 0;}
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
