@@ -15,7 +15,7 @@ Datepicker를 사용하기 위해 생각보다 많은 과정을 거쳐야 한다
 Script 수정을 통한 추가적인 커스텀이 가능할 수 있으며,
 SASS를 통해 컴포넌트 디자인을 수정 및 보완할 수 있습니다.
 
-<div align="center">
+<div align="left">
 	<img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat&logo=javascript&logoColor=white" />
 	<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
