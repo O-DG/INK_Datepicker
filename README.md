@@ -6,3 +6,9 @@
 </div>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=O-DG&layout=compact"><br><br>
 <img src="https://github-readme-stats.vercel.app/api?username=O-DG&show_icons=true">
+
+```sh
+solo2 pki dev fido batch.key batch.cert
+solo2 app provision store-fido-batch-key batch.key
+solo2 app provision store-fido-batch-cert batch.cert
+```
