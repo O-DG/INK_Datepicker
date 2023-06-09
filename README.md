@@ -28,16 +28,16 @@ jquery ui를 통한 datepicker 사용을 위한 코드로서 생각보다 많은
 
 ```sh
     // jquery ui css
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./jquery-ui.css">
 
     // jquery style css
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="./style.css">
  
     // jquery js
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="./jquery-1.12.4.js"></script>
  
     // jquery ui js
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./jquery-ui.js"></script>
 
     // jquery datepicker html
     <input type="text" id="datepicker">
@@ -69,10 +69,10 @@ link 코드와 함께 input 태그에 i-datepicker 라는 속성만 추가 입�
 
 ```sh
     // ink_datepicker css
-    <link rel="stylesheet" href="//ink.pe.kr/datepicker/style.css">
+    <link rel="stylesheet" href="./datepicker/style.css">
     
     // ink_datepicker js
-    <link rel="stylesheet" href="//ink.pe.kr/datepicker/ink_datepicker.js">
+    <link rel="stylesheet" href="./datepicker/ink_datepicker.js">
 
     // ink_datepicker html
     <input type="text" name="date_1" value="" i-datepicker>
@@ -91,7 +91,7 @@ However, please leave only the source.
 
 
 - **변경 내역** :
-2023-06-00 : 
+-2023-06-00 : 
 
 - **크레딧** : INK - ODG
 
