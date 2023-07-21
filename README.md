@@ -23,7 +23,6 @@ SASS를 통해 컴포넌트 디자인을 수정 및 보완할 수 있습니다.
 </div>
 
 
-## 사용법
 
 jquery ui를 통한 datepicker 사용을 위한 코드로서 생각보다 많은 것을 해야한다는 것을 알 수 있습니다.
 
@@ -64,6 +63,8 @@ jquery ui를 통한 datepicker 사용을 위한 코드로서 생각보다 많은
         } );
     </script>
 ```
+
+## 사용법
 
 반면, ink_datepicker의 사용법은 간단합니다.
 link 코드와 함께 input 태그에 i-datepicker 라는 속성만 추가 입력하는 것으로 적용됩니다.
