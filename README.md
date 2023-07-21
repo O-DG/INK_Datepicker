@@ -11,7 +11,7 @@
 Datepicker를 사용하기 위해 생각보다 많은 과정을 거쳐야 한다는 것을 느끼고,
 이를 최소화하고 별도의 코드 작성을 하지 않고 마크업 단계에서 기능을 적용 및 사용할 수 있도록 하는 것을 목표로 작성되었습니다.
 
-해당 코드는 순수한 Javascript와 SASS(SCSS)를 이용하여 작성되었습니다.
+해당 코드는 순수한 Javascript와 SASS(SCSS) > CSS를 이용하여 작성되었습니다.
 Script 수정을 통한 추가적인 커스텀이 가능할 수 있으며,
 SASS를 통해 컴포넌트 디자인을 수정 및 보완할 수 있습니다.
 
@@ -19,6 +19,7 @@ SASS를 통해 컴포넌트 디자인을 수정 및 보완할 수 있습니다.
 	<img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat&logo=javascript&logoColor=white" />
 	<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
+	<img src="https://img.shields.io/badge/CC6699?style=flat&logo=SASS&logoColor=white" />
 </div>
 
 
